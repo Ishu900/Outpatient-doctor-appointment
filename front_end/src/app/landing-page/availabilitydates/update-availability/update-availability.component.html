@@ -1,0 +1,35 @@
+
+<div class="col-md-6 offset-md-3 " style="margin-bottom: 100px;">
+  <hr><br>
+  <h3 class="text-center"><u>Update Availity Date</u></h3>
+  <form (ngSubmit) = "saveAvailitydate()" >
+
+    <div class="form-group">
+      <label>Availabledate Id</label>
+      <input type="text" class="form-control" id="availabilityId"
+        [(ngModel)] = "availabledate.availabilityId" name="availabilityId">
+    </div>
+
+
+    <div class="form-group">
+      <label>Doctor Id</label>
+      <input type="text" class="form-control" id="doctorId"
+        [(ngModel)] = "availabledate.doctor.doctorId" name="doctorId">
+    </div>
+    <div class="form-group">
+      <label>Appointment From Date</label>
+      <input type="date" class="form-control" id="fromDate"
+        [(ngModel)] = "availabledate.fromDate" name="fromDate">
+    </div>
+    <div class="form-group">
+      <label>Appointment End Date</label>
+      <input type="date" class="form-control" id="endDate"
+        [(ngModel)] = "availabledate.endDate" name="endDate">
+    </div>
+
+
+    <div class="text-center">
+      <button class="btn btn-success " type="submit">Update</button>
+    </div>
+</form>
+</div>

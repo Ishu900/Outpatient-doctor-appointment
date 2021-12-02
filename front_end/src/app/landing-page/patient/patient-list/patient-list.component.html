@@ -1,0 +1,51 @@
+<div class="container">
+
+  <div class="row justify-content-center mt-5">
+    <h1> <u>Patient List</u> </h1>
+  </div>
+  <button routerLink="/landing-page/create-patient" class="btn btn-secondary ml-auto ml-5 mb-3">
+    Add Patient
+  </button>
+<table class="table table-striped " style="margin-bottom: 100px;">
+  <thead>
+    <tr>
+      <th>Patient Id</th>
+      <th>Patient Name</th>
+      <th>Mobile No</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Blood Group</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients; let i=index ">
+      <td>{{patient.patientId}}</td>
+      <td>{{patient.patientName}}</td>
+      <td>{{patient.mobileNo}}</td>
+      <td>{{patient.email}}</td>
+
+      <td><input name="{{i}}" readonly type="{{patient.type}}" [ngStyle]="{backgroundColor: i%2==0  ? '#f2f2f2' : 'white'}" [(ngModel)]="patient.password"  style="outline: none;border: none; " />
+
+      <button (click)="showpassword(patient.type,i)">{{patient.bname}}</button>
+
+      <!-- <td>{{patient.password}}</td> -->
+
+      <td>{{patient.bloodGroup}}</td>
+      <td>{{patient.gender}}</td>
+      <td>{{patient.age}}</td>
+      <td>{{patient.address}}</td>
+
+      <td>
+        <button button (click) = "updatePatient(patient.patientId)" class="btn btn-info" >Update</button>
+        <button button (click) = "deletePatient(patient.patientId)" class="btn btn-danger" style="margin-left: 2px;" >Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+

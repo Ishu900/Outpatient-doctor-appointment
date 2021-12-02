@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div class="row justify-content-center mt-5">
+    <h1> <u>Doctor List</u> </h1>
+  </div>
+  <button routerLink="/landing-page/create-doctor" class="btn btn-secondary ml-auto ml-5 mb-3">
+    Add Doctor
+  </button>
+<table class="table table-striped " style="margin-bottom: 100px;">
+  <thead>
+    <tr>
+      <th>Doctor Id</th>
+      <th>Doctor Name</th>
+      <th>Speciality</th>
+      <th>Location</th>
+      <th>Hospital Name</th>
+      <th>Mobile No</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let doctor of doctors; let i=index">
+      <td>{{doctor.doctorId}}</td>
+      <td>{{doctor.doctorName}}</td>
+      <td>{{doctor.speciality}}</td>
+      <td>{{doctor.location}}</td>
+      <td>{{doctor.hospitalName}}</td>
+      <td>{{doctor.mobileNo}}</td>
+      <td>{{doctor.email}}</td>
+
+      <td><input name="{{i}}" readonly type="{{doctor.type}}" [ngStyle]="{backgroundColor: i%2==0  ? '#f2f2f2' : 'white'}" [(ngModel)]="doctor.password"  style="outline: none;border: none; " />
+      <button (click)="showpassword(doctor.type,i)">{{doctor.bname}}</button>
+
+
+      <td>
+        <button button (click) = "updateDoctor(doctor.doctorId)" class="btn btn-info" >Update</button>
+        <button button (click) = "deleteDoctor(doctor.doctorId)" class="btn btn-danger" style="margin-left: 2px;" >Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+

@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div class="row justify-content-center mt-5">
+    <h1> <u>Feedback List</u> </h1>
+  </div>
+  <button routerLink="/landing-page/create-feedback" class="btn btn-secondary ml-auto ml-5 mb-3">
+    Add Feedback
+  </button>
+<table class="table table-striped " style="margin-bottom: 100px;">
+  <thead>
+    <tr>
+      <th>Feedback Id</th>
+      <th>Rating</th>
+      <th>Patient Id</th>
+      <th>Doctor Id</th>
+      <th>Feedback Comment</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let feedback of feedbacks">
+      <td>{{feedback.feedbackId}}</td>
+      <td>{{feedback.rating}}</td>
+      <td>{{feedback.patient.patientId}}</td>
+      <td>{{feedback.doctor.doctorId}}</td>
+      <td>{{feedback.feedbackComment}}</td>
+
+
+
+      <td>
+        <button button (click) = "updateFeedback(feedback.feedbackId)" class="btn btn-info" >Update</button>
+        <button button (click) = "deleteFeedback(feedback.feedbackId)" class="btn btn-danger" style="margin-left: 2px;" >Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+

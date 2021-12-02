@@ -1,0 +1,49 @@
+<div class="col-md-6 offset-md-3">
+  <br>
+  <h1  class="text-center my-5"> <u>User Registration</u></h1>
+  <form #Registerform="ngForm" (ngSubmit) = "registerUser()" >
+    <!-- <small [class.text-danger]="msg.status==500" >{{msg.message}}</small> -->
+    <div class="form-group">
+      <label for="email">User Name :</label>
+      <input type="text" class="form-control"  placeholder="Enter User Name" name="username" [(ngModel)]="user.userName" required #username="ngModel"
+      [class.is-invalid]="username.invalid && username.touched"
+      >
+      <small class="text-danger" [class.d-none]="username.valid ||username.untouched">User name is required field</small>
+
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control"  placeholder="Enter password" name="password" [(ngModel)]="user.password" required #password="ngModel"
+      [class.is-invalid]="password.invalid && password.touched"
+      >
+      <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+
+    </div>
+    <div class="form-group">
+      <label for="pwd">Conform Password:</label>
+      <input type="password" class="form-control"  placeholder="Enter conform password" name="cpassword" (ngModel)="user.password" required #cpassword="ngModel"
+      [class.is-invalid]="cpassword.invalid && cpassword.touched"
+      >
+      <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">Conform Password is Password field must be same</small>
+
+    </div>
+
+    <div class="form-group">
+      <label>Role</label>
+      <input type="text" class="form-control" id="role" placeholder="Enter ADMIN OR NORMAL"
+        [(ngModel)] = "user.role" name="role">
+    </div>
+
+    <div class="text-center">
+      <button [disabled]="Registerform.form.invalid" class="btn btn-success " type="submit">Register</button>
+      <button class="btn btn-success float-right btextual" [routerLink]="['/login']" >Existing user ? Login here</button>
+      <!-- <small class="float-right btextual" [routerLink]="['/login']" >Existing user ? Login here</small> -->
+    </div>
+
+
+
+
+  </form>
+
+</div>

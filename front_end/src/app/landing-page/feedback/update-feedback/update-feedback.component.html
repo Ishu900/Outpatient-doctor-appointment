@@ -1,0 +1,38 @@
+
+<div class="col-md-6 offset-md-3 " style="margin-bottom: 100px;">
+  <hr><br>
+  <h3 class="text-center"><u>Update Feedback</u></h3>
+  <form (ngSubmit) = "saveFeedback()" >
+
+    <div class="form-group">
+      <label>Feedback Id</label>
+      <input type="text" class="form-control" id="feedbackId"
+        [(ngModel)] = "feedback.feedbackId" name="feedbackId">
+    </div>
+    <div class="form-group">
+      <label>Rating</label>
+      <input type="text" class="form-control" id="rating"
+        [(ngModel)] = "feedback.rating" name="rating">
+    </div>
+
+    <div class="form-group">
+      <label>Patient Id</label>
+      <input type="text" class="form-control" id="patientId"
+        [(ngModel)] = "feedback.patient.patientId" name="patientId">
+    </div>
+    <div class="form-group">
+      <label>Doctor Id</label>
+      <input type="text" class="form-control" id="doctorId"
+        [(ngModel)] = "feedback.doctor.doctorId" name="doctorId">
+    </div>
+    <div class="form-group">
+      <label>Feedback Comment</label>
+      <input type="text" class="form-control" id="feedbackComment"
+        [(ngModel)] = "feedback.feedbackComment" name="feedbackComment">
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-success " type="submit">Update</button>
+    </div>
+</form>
+</div>

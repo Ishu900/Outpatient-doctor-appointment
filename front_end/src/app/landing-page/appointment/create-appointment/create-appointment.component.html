@@ -1,0 +1,43 @@
+
+<div class="col-md-6 offset-md-3 " style="margin-bottom: 100px;">
+  <hr><br>
+  <h3 class="text-center"><u>Create Appointment</u></h3>
+  <form (ngSubmit) = "saveAppointment()" >
+
+    <div class="form-group">
+      <label>Appointment Id</label>
+      <input type="text" class="form-control" id="appointmentId"
+        [(ngModel)] = "appointment.appointmentId" name="appointmentId">
+    </div>
+
+    <div class="form-group">
+      <label>Patient Id</label>
+      <input type="text" class="form-control" id="patientId"
+        [(ngModel)] = "appointment.patient.patientId" name="patientId">
+    </div>
+    <div class="form-group">
+      <label>Doctor Id</label>
+      <input type="text" class="form-control" id="doctorId"
+        [(ngModel)] = "appointment.doctor.doctorId" name="doctorId">
+    </div>
+    <div class="form-group">
+      <label>Appointment Date</label>
+      <input type="date" class="form-control" id="appointmentDate"
+        [(ngModel)] = "appointment.appointmentDate" name="appointmentDate">
+    </div>
+    <div class="form-group">
+      <label>Appointment Status</label>
+      <input type="text" class="form-control" id="appointmentStatus"
+        [(ngModel)] = "appointment.appointmentStatus" name="appointmentStatus">
+    </div>
+
+    <div class="form-group">
+      <label>Remark</label>
+      <input type="text" class="form-control" id="remark"
+        [(ngModel)] = "appointment.remark" name="remark">
+    </div>
+    <div class="text-center">
+      <button class="btn btn-success " type="submit">Submit</button>
+    </div>
+</form>
+</div>

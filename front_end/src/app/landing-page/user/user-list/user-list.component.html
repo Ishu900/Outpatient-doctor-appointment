@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="row justify-content-center mt-5">
+      <h1> <u>User List</u> </h1>
+    </div>
+    <button routerLink="/landing-page/create-user" class="btn btn-secondary ml-auto ml-5 mb-3">
+      Add User
+    </button>
+  <table class="table table-striped " style="margin-bottom: 100px;">
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i=index">
+        <td>{{user.userId}}</td>
+        <td>{{user.userName}}</td>
+        <td><input name="{{i}}" readonly type="{{user.type}}" [ngStyle]="{backgroundColor: i%2==0  ? '#f2f2f2' : 'white'}" [(ngModel)]="user.password"  style="outline: none;border: none; " />
+        <button (click)="showpassword(user.type,i)">{{user.bname}}</button>
+        <td>{{user.role}}</td>
+        <td>
+          <button button (click) = "updateUser(user.userId)" class="btn btn-info" >Update</button>
+          <button button (click) = "deleteUser(user.userId)" class="btn btn-danger" style="margin-left: 2px;" >Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+

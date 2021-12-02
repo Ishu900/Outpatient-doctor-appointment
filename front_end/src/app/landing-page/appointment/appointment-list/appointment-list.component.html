@@ -1,0 +1,40 @@
+<div class="container">
+
+  <div class="row justify-content-center mt-5">
+    <h1> <u>Appointment List</u> </h1>
+  </div>
+  <button routerLink="/landing-page/create-appointment" class="btn btn-secondary ml-auto ml-5 mb-3">
+    Add Appointment
+  </button>
+<table class="table table-striped " style="margin-bottom: 100px;">
+  <thead>
+    <tr>
+      <th>Appointment Id</th>
+      <th>Patient Id</th>
+      <th>Doctor Id</th>
+      <th>Appointment Date</th>
+      <th>Appointment Status</th>
+      <th>Remark</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of appointments">
+      <td>{{appointment.appointmentId}}</td>
+      <td>{{appointment.patient.patientId}}</td>
+      <td>{{appointment.doctor.doctorId}}</td>
+      <td>{{appointment.appointmentDate}}</td>
+      <td>{{appointment.appointmentStatus}}</td>
+      <td>{{appointment.remark}}</td>
+
+
+      <td>
+        <button button (click) = "updateAppointment(appointment.appointmentId)" class="btn btn-info" >Update</button>
+        <button button (click) = "deleteAppointment(appointment.appointmentId)" class="btn btn-danger" style="margin-left: 2px;" >Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+

@@ -1,0 +1,35 @@
+
+  
+  <nav class="navbar navbar-expand-sm ">
+    <a class="navbar-brand" routerLink="/landing-page/user-list" style="color: black" href="#"><b>Welcome</b></a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a routerLink="/landing-page/user-list" routerLinkActive="active" class="nav-link " style="color:black"><b>User List</b></a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/landing-page/doctor-list" routerLinkActive="active" class="nav-link " style="color:black"><b>Doctor List</b></a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/landing-page/patient-list" routerLinkActive="active" class="nav-link " style="color:black"><b>Patient List</b></a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/landing-page/admin-list" routerLinkActive="active" class="nav-link " style="color:black"><b>Admin List</b></a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/landing-page/appointment-list" routerLinkActive="active" class="nav-link " style="color:black"><b>Appointment List</b></a>
+      </li>
+      
+     
+      <button class="btn btn-danger" (click)="logout()" style="color:pink"><b><font color="white">Logout</font></b></button>
+    </ul>
+  </nav>
+ 
+
+    <router-outlet></router-outlet>
+  
+  <footer class="footer " >
+    <div class="container">
+      <span><font color="black"><b>Doctor Appointment Booking Application</b></font> </span>
+    </div>
+    </footer>
+ 
