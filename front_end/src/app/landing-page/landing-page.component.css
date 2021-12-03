@@ -8,34 +8,37 @@ a:hover, a:active {
 
 .navbar
 {
-	margin-top:0px;
-	margin-left:0px;
-	margin:0px ; 
+
 	height:100px;
     top:0;
     width:100%;
-    position:absolute;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
   
-	background-color: pink;
+	
 }
 
 
 .btn
 {
-	background-color:indianred;
+	background-color:red;
 }
 .nav-item
 {
-	margin-right: 50px;
+	margin-right: 36px;
+	font-style: normal;
+	font-family: 'Times New Roman', Times, serif;
 }
 .footer
 {
-	background-color: pink;
-	height: 100px;
-	font-size: 20px;
+	
+	height: 40px;
+	font-size: 15px;
 }
 .navbar-brand
 {
-	font-size: 45px;
+	margin-top:0px;
+	font-size: 30px;
+	font-style: normal;
+	font-family: 'Times New Roman', Times, serif;
 }

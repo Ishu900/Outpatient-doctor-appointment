@@ -1,9 +1,9 @@
 
 <div class="container">
-  <h1 class="text-center my-5"> <u>Login User</u> </h1>
+  <h1 class="text-center my-5">Login </h1>
   <form #loginform="ngForm" (ngSubmit)="loginUser()">
     <small class="text-danger">{{msg}}</small>
-    <div class="form-group mt-5">
+    <div class="form-group mt-3">
       <label for="email">User Name :</label>
       <input type="text" class="form-control"  placeholder="Enter User Name" name="username" [(ngModel)]="user.userName" required #username="ngModel"
       [class.is-invalid]="username.invalid && username.touched"
@@ -33,13 +33,12 @@
       </label>
     </div>
     <div class="text-center mt-5">
-      <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-success">Login</button>&nbsp;&nbsp;
-      <button class="btn btn-success float-right btextual" [routerLink]="['/registration']">New user ? Register here</button>
+      <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-primary">Login</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-primary" [routerLink]="['/registration']">or SignUp with</button>
     </div>
 
   </form>
-  <!-- <small class="float-right" (click)="gotoregistration()">New user ? Register here</small> -->
-  <!-- <small class="float-right" [routerLink]="['/registration']">New user ? Register here</small> -->
+  
 
 </div>
 

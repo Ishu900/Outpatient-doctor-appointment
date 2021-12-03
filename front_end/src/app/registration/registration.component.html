@@ -1,6 +1,6 @@
 <div class="col-md-6 offset-md-3">
   <br>
-  <h1  class="text-center my-5"> <u>User Registration</u></h1>
+  <h1  class="text-center my-5">User Registration</h1>
   <form #Registerform="ngForm" (ngSubmit) = "registerUser()" >
     <!-- <small [class.text-danger]="msg.status==500" >{{msg.message}}</small> -->
     <div class="form-group">
@@ -36,8 +36,8 @@
     </div>
 
     <div class="text-center">
-      <button [disabled]="Registerform.form.invalid" class="btn btn-success " type="submit">Register</button>
-      <button class="btn btn-success float-right btextual" [routerLink]="['/login']" >Existing user ? Login here</button>
+      <button [disabled]="Registerform.form.invalid" class="btn btn-primary " type="submit">Register</button>
+      <button class="btn btn-primary float-right btextual" [routerLink]="['/login']" >Existing user ? Login here</button>
       <!-- <small class="float-right btextual" [routerLink]="['/login']" >Existing user ? Login here</small> -->
     </div>
 

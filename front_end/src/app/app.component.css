@@ -1,26 +1,16 @@
 
 .back_ground_style
 {
-background: url("https://clarkebenefits.com/wp-content/uploads/2018/07/background-image.jpg"); 
-margin-top:100px;
-margin-bottom: 100px;
-margin-left:0px;
-margin-right:0px;
-top:0;
-left:0;
-right:0;
+background: url("https://qtxasset.com/fiercehealthcare/1562973884/GettyImages-898906336.jpg/GettyImages-898906336.jpg?OhHp8.hb4iZbXQ.xHf4.JzCZpWlc56My.jpg"); 
+
 width:100%;
-height: 900px;
-background-repeat: no-repeat;
-display: block;
-
-
-
-background-position:center;
+height: 1050px;
+background-repeat:repeat;
+background-position:90;
 background-size:cover;
 background-origin:content-box;
 }
 body
 {
-	overflow: hidden;
+	overflow:auto;
 }
