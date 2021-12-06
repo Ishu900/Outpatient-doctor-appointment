@@ -48,9 +48,9 @@ public class AdminController {
         try {
             Admin existAdmin = adminService.update(admin);
             adminService.save(admin);
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<Object>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
         }
     }
 

@@ -81,9 +81,9 @@ public class UserController {
         try {
             User existUser = userService.update(user);
             userService.save(user);
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<Object>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
         }
     }
 

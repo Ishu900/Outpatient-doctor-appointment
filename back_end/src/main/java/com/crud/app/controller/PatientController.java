@@ -49,9 +49,9 @@ public class PatientController {
         try {
             Patient existPatient = patientService.update(patient);
             patientService.save(patient);
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<Object>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
         }
     }
 
