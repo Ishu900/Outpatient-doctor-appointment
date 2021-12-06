@@ -4,8 +4,8 @@
   <form #loginform="ngForm" (ngSubmit)="loginUser()">
     <small class="text-danger">{{msg}}</small>
     <div class="form-group mt-3">
-      <label for="email">User Name :</label>
-      <input type="text" class="form-control"  placeholder="Enter User Name" name="username" [(ngModel)]="user.userName" required #username="ngModel"
+      <label   for="email">User Name :</label>
+      <input type="text" class="form-control"  placeholder="Enter User Name" name="username" width ="511px" [(ngModel)]="user.userName" required #username="ngModel"
       [class.is-invalid]="username.invalid && username.touched"
       >
       <small class="text-danger" [class.d-none]="username.valid ||username.untouched">User name is required field</small>

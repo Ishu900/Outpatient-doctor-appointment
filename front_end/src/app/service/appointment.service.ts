@@ -7,7 +7,7 @@ import { Appointment } from '../model/appointment';
   providedIn: 'root'
 })
 export class AppointmentService {
-  private baseUrl="http://localhost:8080/appointment";
+  private baseUrl="http://localhost:8081/appointment";
   constructor(private httpClient: HttpClient) { }
 
   createAppointment(appointment:Appointment): Observable<any>{

@@ -7,7 +7,7 @@ import { Feedback } from '../model/feedback';
   providedIn: 'root'
 })
 export class FeedbackService {
-  private baseUrl="http://localhost:8080/feedback";
+  private baseUrl="http://localhost:8081/feedback";
   constructor(private httpClient: HttpClient) { }
 
   createFeedback(feedback:Feedback): Observable<any>{

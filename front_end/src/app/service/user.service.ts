@@ -9,7 +9,7 @@ import { User } from '../model/user';
 
 export class UserService {
 
-  private baseUrl="http://localhost:8080/user";
+  private baseUrl="http://localhost:8081/user";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,15 +18,15 @@ export class UserService {
   }
 
   createUser(user:User): Observable<Object>{
-    return this.httpClient.post("http://localhost:8080/registeruser", user);
+    return this.httpClient.post("http://localhost:8081/registeruser", user);
   }
 
   public loginUserFromRemote(user : User): Observable<any>{
-    return this.httpClient.post<any>("http://localhost:8080/login", user)
+    return this.httpClient.post<any>("http://localhost:8081/login", user)
   }
 
   public registerUserFromRemote(user : User):Observable<any>{
-    return this.httpClient.post<any>("http://localhost:8080/registeruser", user)
+    return this.httpClient.post<any>("http://localhost:8081/registeruser", user)
   }
 
   getUserById(id: number): Observable<User>{

@@ -7,7 +7,7 @@ import { Admin } from '../model/admin';
   providedIn: 'root'
 })
 export class AdminService {
-  private baseUrl="http://localhost:8080/admin";
+  private baseUrl="http://localhost:8081/admin";
   constructor(private httpClient: HttpClient) { }
 
   createAdmin(admin:Admin): Observable<any>{
